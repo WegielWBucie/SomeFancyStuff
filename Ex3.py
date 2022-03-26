@@ -80,7 +80,9 @@ if word[0] > "z":
 
 startTime = time.time()
 file = open("SJP.txt", "rb")
-
+    # dictionary text file was to big to upload, therefore below I paste it's google-drive link:
+    # https://drive.google.com/file/d/1vOnYIJpBqTT8LXzqiXGhshFj0MTLgdWp/view?usp=sharing
+    
 myEndBit = file.seek(0, os.SEEK_END)
 
 if binarySearch(word, 1, myEndBit, originalWord, polishSignAtTheBeginning):
@@ -90,3 +92,5 @@ else:
 print(time.time() - startTime)
 
 file.close()
+
+
