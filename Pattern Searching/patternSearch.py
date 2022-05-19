@@ -95,6 +95,6 @@ if __name__ == '__main__':
     pattern = "ABC"
 
     files = ["1000_pattern.txt", "2000_pattern.txt", "3000_pattern.txt",
-             "4000_pattern.txt", "5000_pattern.txt", "8000_pattern.txt"]
+             "4000_pattern.txt", "5000_pattern.txt"]
 
     execute(pattern, files)
