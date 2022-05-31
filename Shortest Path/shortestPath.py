@@ -58,7 +58,7 @@ if __name__ == '__main__':
     for i in range(0, len(cities) - 1):
         for j in range(0, len(cities) - 1):
             if cities[j + 1].y + 11 < cities[j].y:                              # + 11, because it provided significant reduction of route
-                cities[j + 1], cities[j] = cities[j], cities[j + 1]             # length, wchich will not be as efficient, if array was just sorted by y,
+                cities[j + 1], cities[j] = cities[j], cities[j + 1]             # length, which will not be as efficient, if array was just sorted by y,
                                                                                 # because then there would have been large x value differences between cities
                                                                                 # (quite similar as y value differences when just sorted by x)
 
