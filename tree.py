@@ -60,7 +60,7 @@ def insert(x: float, structure: list):
     else:
         if search(x, structure):
             print("Element", x, "is already contained.")
-            return None
+            # return None
 
         added = False
         for node in structure:
