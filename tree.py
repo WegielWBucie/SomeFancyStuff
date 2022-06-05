@@ -51,16 +51,16 @@ def quickSortTree(tree: list, beginIndex, endIndex):
 def insert(x: float, structure: list):
     if (x - int(x)) * 100 == 50:
         for node in structure:
-            if x == node:
+            if x == node[0]:
                 print("Root already contained.")
-                break
+                return None
         else:
             structure.append([x])
             quickSortTree(tree, 0, len(tree) - 1)
     else:
         if search(x, structure):
             print("Element", x, "is already contained.")
-            # return None
+            return None
 
         added = False
         for node in structure:
@@ -84,6 +84,8 @@ def insert(x: float, structure: list):
                                 node = node[1]
                         elif len(node) == 3:
                             node = node[1]
+                    # elif x == node[0]: doesnt check all the cases, besides that is already contained in search
+                    # function print() return None
                 node.append([x])
                 if swap:
                     node[1], node[2] = node[2], node[1]
@@ -200,6 +202,9 @@ if __name__ == '__main__':
     print(search(3.5, tree))
     insert(3.9, tree)
     print(search(3.9, tree))
+
+    insert(1.5, tree)
+    insert(1.3, tree)
 
     for node in tree:
         print(node)
